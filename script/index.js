@@ -8,7 +8,7 @@ signinBtn.addEventListener("click", (e) => {
   if (!emailValue || !password) {
     alert("please provide email and password");
   } else if (emailValue === "admin@gmail.com" && password === "admin123") {
-    alert("Login successful");
+    window.location.href = "./home.html";
   } else {
     alert("Invalid email or password");
   }

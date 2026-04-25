@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JHK Shop</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Fontawesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- DaisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#F9FAFB] h-svh">
+    <header class="bg-white py-3">
+      <nav class="flex items-center justify-between container mx-auto">
+        <h1 class="text-2xl font-medium">JHK Shop</h1>
+
+        <!-- Search Input Field -->
+        <div class="relative">
+          <input type="text" placeholder="Type here" class="input pl-8" />
+
+          <i
+            class="fa-solid fa-magnifying-glass absolute top-1/2 -translate-y-1/2 left-2 text-gray-500"
+          ></i>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mx-auto my-12">
+      <section>
+        <h4 class="text-2xl font-medium">Discover Our Products</h4>
+        <p class="text-gray-400 mt-2 mb-6">
+          Explore our curated collection of premium products
+        </p>
+
+        <div class="flex items-center justify-between">
+          <select class="select w-35">
+            <option selected>All</option>
+            <option>Men</option>
+            <option>Women</option>
+            <option>Baby</option>
+          </select>
+
+          <p class="bg-[#4F46E5] text-white py-2 px-6 rounded-xl">Total: 6</p>
+        </div>
+
+        <!-- Products Container -->
+        <div class="mt-6">
+          <!-- Product Card -->
+          <div
+            class="bg-white drop-shadow-lg p-4 rounded-xl border-t-2 border-[#4F46E5]"
+          >
+            <img
+              src="https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg"
+              alt=""
+              class="rounded-xl"
+            />
+
+            <div class="space-y-2 my-3">
+              <p class="font-medium">Premium Wireless Controller</p>
+              <p
+                class="bg-[#4F46E5]/20 text-[#4F46E5] px-3 py-0.5 w-fit rounded-xl"
+              >
+                Men
+              </p>
+              <p class="text-[#4F46E5]">$199.99</p>
+            </div>
+
+            <button class="bg-[#4F46E5] text-white py-2 w-full rounded-xl">
+              View Details
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#4F46E5] py-20">
+      <div
+        class="container mx-auto flex items-center justify-center flex-col text-center"
+      >
+        <h2 class="text-5xl font-bold text-white">JHK Shop</h2>
+        <p class="text-gray-300 mt-2 mb-6">
+          Your personal shelf of meaningful connections. Browse, tend, and
+          nurture the relationships that matter most.
+        </p>
+
+        <div>
+          <p class="text-white font-medium mb-2">Social Links</p>
+
+          <div class="space-x-2">
+            <a class="bg-white p-1 rounded-full" href="#"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a class="bg-white p-1 rounded-full" href="#"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a class="bg-white p-1 rounded-full" href="#"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="text-gray-200 my-8" />
+
+      <div
+        class="flex items-center justify-between text-gray-300 container mx-auto"
+      >
+        <p>© 2026 KeenKeeper. All rights reserved.</p>
+
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
