@@ -1,10 +1,16 @@
 const productContainer = document.getElementById("productContainer");
+const loading = document.getElementById("loading");
+let isLoading = true;
 
 const fetchProducts = () => {
+  isLoading = true;
+  loading.style.display = "flex";
   fetch("https://in-a5-server.vercel.app/products")
     .then((res) => res.json())
     .then((data) => {
       displayProducts(data);
+      isLoading = false;
+      loading.style.display = "none";
     });
 };
 
