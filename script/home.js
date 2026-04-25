@@ -1,5 +1,8 @@
 const productContainer = document.getElementById("productContainer");
 const select = document.getElementById("select");
+const total = document.getElementById("total");
+const noProduct = document.getElementById("noProduct");
+const searchBtn = document.getElementById("searchBtn");
 const loading = document.getElementById("loading");
 let isLoading = true;
 
@@ -34,6 +37,12 @@ const fetchProducts = (selectedValue) => {
 
 const displayProducts = (products) => {
   productContainer.innerHTML = "";
+  noProduct.style.display = "none";
+  total.innerText = `Total: ${products.length}`;
+
+  if (products.length === 0) {
+    noProduct.style.display = "block";
+  }
 
   products.forEach((product) => {
     const card = document.createElement("div");
@@ -73,6 +82,18 @@ select.addEventListener("change", (e) => {
   const selectedValue = e.target.value;
 
   fetchProducts(selectedValue);
+});
+
+const handleSearch = (searchValue) => {
+  fetch(`https://in-a5-server.vercel.app/search?q=${searchValue}`)
+    .then((res) => res.json())
+    .then((data) => displayProducts(data));
+};
+
+searchBtn.addEventListener("click", () => {
+  const searchInput = document.getElementById("searchInput").value;
+
+  handleSearch(searchInput);
 });
 
 fetchProducts();

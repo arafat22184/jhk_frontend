@@ -30,13 +30,26 @@
       <nav class="flex items-center justify-between container mx-auto">
         <h1 class="text-2xl font-medium">JHK Shop</h1>
 
-        <!-- Search Input Field -->
-        <div class="relative">
-          <input type="text" placeholder="Type here" class="input pl-8" />
+        <div class="flex items-center gap-2">
+          <!-- Search Input Field -->
+          <div class="relative">
+            <input
+              id="searchInput"
+              type="text"
+              placeholder="Type here"
+              class="input pl-8"
+            />
 
-          <i
-            class="fa-solid fa-magnifying-glass absolute top-1/2 -translate-y-1/2 left-2 text-gray-500"
-          ></i>
+            <i
+              class="fa-solid fa-magnifying-glass absolute top-1/2 -translate-y-1/2 left-2 text-gray-500"
+            ></i>
+          </div>
+          <button
+            id="searchBtn"
+            class="btn bg-[#4F46E5] hover:bg-[#4F46E5]/90 text-white"
+          >
+            Search
+          </button>
         </div>
       </nav>
     </header>
@@ -56,7 +69,9 @@
             <option>Baby</option>
           </select>
 
-          <p class="bg-[#4F46E5] text-white py-2 px-6 rounded-xl">Total: 6</p>
+          <p id="total" class="bg-[#4F46E5] text-white py-2 px-6 rounded-xl">
+            Total: 0
+          </p>
         </div>
 
         <div id="loading" class="flex items-center justify-center gap-4">
@@ -64,6 +79,10 @@
           <span class="loading loading-spinner text-primary loading-xl"></span>
 
           <span class="loading loading-spinner text-primary loading-xl"></span>
+        </div>
+
+        <div id="noProduct">
+          <p>No Products found</p>
         </div>
 
         <!-- Products Container -->
