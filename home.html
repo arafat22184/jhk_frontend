@@ -26,6 +26,40 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="bg-[#F9FAFB] h-svh">
+
+<button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+
+<dialog id="my_modal_1"  class="modal">
+  <div class="w-2xl bg-white">
+    <div class="flex ">
+    <img class="flex-0" src="${product.img}"/>
+
+    <div class="flex-0 bg-white">
+    <p
+                class="px-3 py-0.5 w-fit rounded-xl ${product.category === "Men" ? "bg-[#4F46E5]/20 text-[#4F46E5] " : product.category === "Women" ? "bg-[#FF33EA]/20 text-[#FF33EA]" : "bg-orange-400/20 text-orange-400"}"
+              >
+                ${product.category}
+              </p>
+
+              <p class="font-medium">${product.title}</p>
+
+              <p class="text-gray-500">${product.details}</p>
+ <p class="text-[#4F46E5]">$${product.price}</p>
+
+ <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+
+    </div>
+    
+    </div>
+   
+  </div>
+</dialog>
+
     <header class="bg-white py-3">
       <nav class="flex items-center justify-between container mx-auto">
         <h1 class="text-2xl font-medium">JHK Shop</h1>

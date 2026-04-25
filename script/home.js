@@ -67,10 +67,42 @@ const displayProducts = (products) => {
               <p class="text-[#4F46E5]">$${product.price}</p>
             </div>
 
-            <button class="bg-[#4F46E5] text-white py-2 w-full rounded-xl">
+            <button onclick="document.getElementById('${product._id}').showModal()" class="bg-[#4F46E5] text-white py-2 w-full rounded-xl">
               View Details
             </button>
           </div>
+
+          
+<dialog id="${product._id}" class="modal">
+  <div class="max-w-2xl bg-white flex p-0 drop-shadow-sm rounded-2xl">
+
+  <div class="flex-1 rounded-2xl">
+  
+  <img class="rounded-l-2xl w-full h-full object-cover" src="${product.img}"/>
+  </div>
+
+    <div class="flex-1 bg-white rounded-2xl space-y-3 p-8">
+    <p
+                class="px-3 py-0.5 w-fit rounded-xl ${product.category === "Men" ? "bg-[#4F46E5]/20 text-[#4F46E5] " : product.category === "Women" ? "bg-[#FF33EA]/20 text-[#FF33EA]" : "bg-orange-400/20 text-orange-400"}"
+              >
+                ${product.category}
+              </p>
+
+              <p class="font-medium">${product.title}</p>
+
+              <p class="text-gray-500">${product.description}</p>
+ <p class="text-[#4F46E5]">$${product.price}</p>
+
+      <form method="dialog">
+        <button class="btn bg-[#4F46E5] text-white">Add To Cart</button>
+      </form>
+    
+    </div>  
+
+
+   
+  </div>
+</dialog>
     `;
     productContainer.appendChild(card);
   });
